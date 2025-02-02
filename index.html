@@ -4,27 +4,29 @@
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sistema Bancario UDistrital</title>
-    <link rel="stylesheet" href="./styles/styles.css">
-    <link rel="icon" href="./img/Icon.ico">
+    <link rel="stylesheet" href="./Styles/styles.css">
+    <link rel="icon" href="./Assets/Icon.ico">
 </head>
 <body>
     <header>
-        <img src="./img/Logo.png" alt="Logo del Sistema Bancario UDistrital"/>
+        <a href="./index.html">
+            <img src="./Assets/Logo.png" alt="Logo del Sistema Bancario UDistrital" title="HOME"/>
+        </a>
         <nav>
             <label for="menu">Seleccione el proceso que desea realizar:</label>
             <select id="menu" onchange="window.location.href=this.value;">
                 <option value="#" selected disabled>-- Seleccione una opción --</option>
-                <option value="./pages/interes_compuesto.html">Interés Compuesto</option>
-                <option value="./pages/cambio_de_tasa.html">Cambio de tasas</option>
-                <option value="./pages/equivalencia.html">Equivalencia de tasas</option>
-                <option value="./pages/tasa_anticipada.html">Tasa anticipada</option>
-                <option value="./pages/ecuacion_valor.html">Ecuación de valor</option>
-                <option value="./pages/anualidad_vencida.html">Anualidad vencida</option>
-                <option value="./pages/anualidad_anticipada.html">Anualidad anticipada</option>
-                <option value="./pages/anualidad_diferida.html">Anualidad diferida</option>
-                <option value="./pages/anualidad_perpetua.html">Anualidad perpetua</option>
-                <option value="./pages/amortizacion.html">Amortización</option>
-                <option value="./pages/capitalizacion.html">Capitalización</option>
+                <option value="./Pages/TemaInteresCompuesto.html">Interés Compuesto</option>
+                <option value="./Pages/TemaCambioTasa.html">Cambio de tasas</option>
+                <option value="./Pages/TemaEquivalencia.html">Equivalencia de tasas</option>
+                <option value="./Pages/TemaTasaAnticipada.html">Tasa anticipada</option>
+                <option value="./Pages/TemaEcuacionValor.html">Ecuación de valor</option>
+                <option value="./Pages/TemaAnualidadVencida.html">Anualidad vencida</option>
+                <option value="./Pages/TemaAnualidadAnticipada.html">Anualidad anticipada</option>
+                <option value="./Pages/TemaAnualidadDiferida.html">Anualidad diferida</option>
+                <option value="./Pages/TemaAnualidadPerpetua.html">Anualidad perpetua</option>
+                <option value="./Pages/TemaAmortizacion.html">Amortización</option>
+                <option value="./Pages/TemaCapitalizacion.html">Capitalización</option>
             </select>
         </nav>
     </header>

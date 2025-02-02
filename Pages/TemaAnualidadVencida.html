@@ -2,28 +2,36 @@
 <html>
     <head>
         <meta charset="UTF-8"/>
-        <link rel="stylesheet" href="../styles/styles.css">
+        <link rel="stylesheet" href="../Styles/styles.css">
         <title>Banca UD</title>
-        <link rel="icon" href="../img/Icon.ico">
+        <link rel="icon" href="../Assets/Icon.ico">
     </head>
     <body>
         <header>
-            <img src="../img/Logo.png" alt="Logo"/>
-            <a href="../index.html">Inicio</a>
-            <a href="./interes_compuesto.html">Interes Compuesto</a><!--F = S = P(1+i)^n-->
-            <a href="./cambio_de_tasa.html">Cambio de tasas</a><!----><!--i = j/m || j = i*m-->
-            <a href="./equivalencia.html">Equivaencia de tasas</a><!----><!--(1+i)^n = (1+i)^m-->
-            <a href="./tasa_anticipada.html">Tasa anticipada</a>
-            <a href="./ecuacion_valor.html">Ecuacion de valor</a>
-            <a href="./anualidad_vencida.html">Anualidad vencida</a>
-            <a href="./anualidad_diferida.html">Anualidad diferida</a>
-            <a href="./anualidad_perpetua.html">Anualidad perpetua</a>
-            <a href="./amortizacion.html">Amortizacion</a>
-            <a href="./capitalizacion.html">Capitalizacion</a>
+            <a href="../index.html">
+                <img src="../Assets/Logo.png" alt="Logo del Sistema Bancario UDistrital" title="HOME"/>
+            </a>
+            <nav>
+                <label for="menu">Seleccione el proceso que desea realizar:</label>
+                <select id="menu" onchange="window.location.href=this.value;">
+                    <option value="#" selected disabled>-- Seleccione una opción --</option>
+                    <option value="../index.html">Home</option>
+                    <option value="./TemaInteresCompuesto.html">Interés Compuesto</option>
+                    <option value="./TemaCambioTasa.html">Cambio de tasas</option>
+                    <option value="./TemaEquivalencia.html">Equivalencia de tasas</option>
+                    <option value="./TemaTasaAnticipada.html">Tasa anticipada</option>
+                    <option value="./TemaEcuacionValor.html">Ecuación de valor</option>
+                    <option value="./TemaAnualidadAnticipada.html">Anualidad anticipada</option>
+                    <option value="./TemaAnualidadDiferida.html">Anualidad diferida</option>
+                    <option value="./TemaAnualidadPerpetua.html">Anualidad perpetua</option>
+                    <option value="./TemaAmortizacion.html">Amortización</option>
+                    <option value="./TemaCapitalizacion.html">Capitalización</option>
+                </select>
+            </nav>
         </header>
         <main>
             <h1>Bienvenido al sistema bancario UD</h1>
-            <h2>Esta es la anualidad anticipada</h2>
+            <h2>Esta es la anualidad vencida</h2>
                 <h3 class="hallar">Hallar:</h3>
                 <select id="buscarVal" class="buscador">
                     <option>Seleccionar</option>
@@ -64,6 +72,7 @@
                     </select>
                     <label for="C3" id="L3"></label>
                     <input type="number" id="C3"/>
+                    
 
                     <label id="condicion">Considerar i como efectivo no anticipado de periodo:</label>
                     <select id="a_periodo">
@@ -75,10 +84,10 @@
                         <option value="6">Semestral</option>
                         <option value="12">Anual</option>
                     </select> 
-
-                    <button id="solucionar" class="btn">Solucionar</button>
-                    <label id="resultado" class="res"></label>
+                    
                 </div>
+                <button id="solucionar" class="btn">Solucionar</button>
+                <label id="resultado" class="res"></label>
             </main>
             <footer>
                 <h3>Desarrollado por:</h3>
@@ -157,7 +166,7 @@
                 let l3 = document.getElementById("L3");
                 l1.innerHTML = "Cuota";
                 l2.innerHTML = "Interes";
-                l3.innerHTML = "Numeros de pagos";
+                l3.innerHTML = "Numero de pagos";
                 document.getElementById("clase").style.display = "inline-block";
                 document.getElementById("tasa").style.display = "inline-block";
                 document.getElementById("periodo").style.display = "inline-block";
@@ -181,6 +190,7 @@
         }
         if(document.getElementById("buscar") != null){
             let buscar = document.getElementById("buscar");
+        
             //Dinamismo de campos
             buscar.addEventListener("change" , ()=>{
                 switch(parseInt(buscar.value)){
@@ -198,9 +208,9 @@
                         let l2 = document.getElementById("L2");
                         let l3 = document.getElementById("L3");
                         if(parseInt(buscarVal.value) == 1){
-                            l1.innerHTML = "Valor Futuro";
+                            l1.innerHTML = "Valor futuro";
                         }else{
-                            l1.innerHTML = "Valor Presente";
+                            l1.innerHTML = "Valor presente";
                         }
                         l2.innerHTML = "Interes";
                         l3.innerHTML = "Cuota";
@@ -211,9 +221,9 @@
                         let l2 = document.getElementById("L2");
                         let l3 = document.getElementById("L3");
                         if(parseInt(buscarVal.value) == 1){
-                            l1.innerHTML = "Valor Futuro";
+                            l1.innerHTML = "Valor futuro";
                         }else{
-                            l1.innerHTML = "Valor Presente";
+                            l1.innerHTML = "Valor presente";
                         }
                         l2.innerHTML = "Interes";
                         l3.innerHTML = "Numero de pagos";
@@ -243,11 +253,11 @@
                     case 1:{
                         if(validar()){
                             if(parseInt(document.getElementById("C2").value)>=0 && parseInt(document.getElementById("C1").value)>=0 && parseInt(document.getElementById("C3").value)>=0){
-                                console.log("vf = A[(((1+i)^n)-1)/i](1+i)");
+                                console.log("vf = A[(((1+i)^n)-1)/i]");
                                 let p = parseFloat(document.getElementById("C1").value);
                                 let i = conversor(parseFloat(document.getElementById("C2").value),true,2,"efectivo",false);
                                 let n = parseFloat(document.getElementById("C3").value);
-                                let res = p*((Math.pow((1+i),n)-1)/i)*(1+i);
+                                let res = p*((Math.pow((1+i),n)-1)/i);
                                 document.getElementById("resultado").innerHTML = res.toFixed(6);
                             }else{
                                 alert("Los campos deben ser mayores a 0");
@@ -260,11 +270,11 @@
                     case 2:{
                         if(validar()){
                             if(parseInt(document.getElementById("C2").value)>=0 && parseInt(document.getElementById("C1").value)>=0 && parseInt(document.getElementById("C3").value)>=0){
-                                console.log("vp = A[(1-((1+i)^n))/i](1+i)");
+                                console.log("vp = A[(1-((1+i)^n))/i]");
                                 let p = parseFloat(document.getElementById("C1").value);
                                 let i = conversor(parseFloat(document.getElementById("C2").value),true,2,"efectivo",false);
                                 let n = parseFloat(document.getElementById("C3").value);
-                                let res = p*((1-(Math.pow((1+i),-n)))/i)*(1+i);
+                                let res = p*((1-(Math.pow((1+i),-n)))/i);
                                 console.log(1-(Math.pow((1+i),-n)));
                                 console.log(p + "--" + n + "--" + i + "//" + (1-(Math.pow((1+i),-n))));
                                 console.log((1-(Math.pow((1+i),-n)))/i);
@@ -286,12 +296,12 @@
                     case 1:{
                         if(validar()){
                             if(parseInt(document.getElementById("C2").value)>=0 && parseInt(document.getElementById("C1").value)>=0 && parseInt(document.getElementById("C3").value)>=0){
-                                console.log("n = log(1+i)((Si/(A*(1+i)))+1)");
+                                console.log("n = log(1+i)((Si/A)+1)");
                                 //(Math.log10(s/p))/(Math.log10(1+i));
                                 let p = parseFloat(document.getElementById("C1").value);
                                 let i = conversor(parseFloat(document.getElementById("C2").value),true,2,"efectivo",false);
                                 let r = parseFloat(document.getElementById("C3").value);
-                                let res = Math.log10(((p*i)/(r*(1+i)))+1)/Math.log10(1+i);
+                                let res = Math.log10(((p*i)/r)+1)/Math.log10(1+i);
                                 document.getElementById("resultado").innerHTML = res.toFixed(6);
                             }else{
                                 alert("Los campos deben ser mayores a 0");
@@ -304,11 +314,11 @@
                     case 2:{
                         if(validar()){
                             if(parseInt(document.getElementById("C2").value)>=0 && parseInt(document.getElementById("C1").value)>=0 && parseInt(document.getElementById("C3").value)>=0){
-                                console.log("n = -log(1+i)(1-(Si/(A*(1+i))))");
+                                console.log("n = -log(1+i)(1-(Si/A))");
                                 let p = parseFloat(document.getElementById("C1").value);
                                 let i = conversor(parseFloat(document.getElementById("C2").value),true,2,"efectivo",false);
                                 let r = parseFloat(document.getElementById("C3").value);
-                                let res = -(Math.log10(1-((p*i)/(r*(1+i))))/Math.log10(1+i));
+                                let res = -(Math.log10(1-((p*i)/r))/Math.log10(1+i));
                                 document.getElementById("resultado").innerHTML = res.toFixed(6);
                             }else{
                                 alert("Los campos deben ser mayores a 0");
@@ -326,11 +336,11 @@
                     case 1:{
                         if(validar()){
                             if(parseInt(document.getElementById("C2").value)>=0 && parseInt(document.getElementById("C1").value)>=0 && parseInt(document.getElementById("C3").value)>=0){
-                                console.log("r = s/(((((1+i)^n)-1)/i)*(1+i))");
+                                console.log("r = s/((((1+i)^n)-1)/i)");
                                 let s = parseFloat(document.getElementById("C1").value);
                                 let i = conversor(parseFloat(document.getElementById("C2").value),true,2,"efectivo",false);
                                 let n = parseFloat(document.getElementById("C3").value);
-                                let res = s/((((Math.pow((1+i),n))-1)/i)*(1+i));
+                                let res = s/(((Math.pow((1+i),n))-1)/i);
                                 document.getElementById("resultado").innerHTML = res.toFixed(6);
                             }else{
                                 alert("Los campos deben ser mayores a 0");
@@ -343,11 +353,11 @@
                     case 2:{
                         if(validar()){
                             if(parseInt(document.getElementById("C2").value)>=0 && parseInt(document.getElementById("C1").value)>=0 && parseInt(document.getElementById("C3").value)>=0){
-                                console.log("r = s/((1-((1+i)^-n)/i)*(1+i))");
+                                console.log("r = s/(1-((1+i)^-n)/i)");
                                 let s = parseFloat(document.getElementById("C1").value);
                                 let i = conversor(parseFloat(document.getElementById("C2").value),true,2,"efectivo",false);
                                 let n = parseFloat(document.getElementById("C3").value);
-                                let res = s/(((1-(Math.pow((1+i),-n)))/i)*(1+i));
+                                let res = s/((1-(Math.pow((1+i),-n)))/i);
                                 document.getElementById("resultado").innerHTML = res.toFixed(6);
                             }else{
                                 alert("Los campos deben ser mayores a 0");

@@ -2,24 +2,32 @@
 <html>
     <head>
         <meta charset="UTF-8"/>
-        <link rel="stylesheet" href="../styles/styles.css">
+        <link rel="stylesheet" href="../Styles/styles.css">
         <title>Banca UD</title>
-        <link rel="icon" href="../img/Icon.ico">
+        <link rel="icon" href="../Assets/Icon.ico">
     </head>
     <body>
         <header>
-            <img src="../img/Logo.png" alt="Logo"/>
-            <a href="../index.html">Inicio</a>
-            <a href="./interes_compuesto.html">Interes Compuesto</a><!--F = S = P(1+i)^n-->
-            <a href="./cambio_de_tasa.html">Cambio de tasas</a><!----><!--i = j/m || j = i*m-->
-            <a href="./equivalencia.html">Equivaencia de tasas</a><!----><!--(1+i)^n = (1+i)^m-->
-            <a href="./ecuacion_valor.html">Ecuacion de valor</a>
-            <a href="./anualidad_vencida.html">Anualidad vencida</a>
-            <a href="./anualidad_anticipada.html">Anualidad anticipada</a>
-            <a href="./anualidad_diferida.html">Anualidad diferida</a>
-            <a href="./anualidad_perpetua.html">Anualidad perpetua</a>
-            <a href="./amortizacion.html">Amortizacion</a>
-            <a href="./capitalizacion.html">Capitalizacion</a>
+            <a href="../index.html">
+                <img src="../Assets/Logo.png" alt="Logo del Sistema Bancario UDistrital" title="HOME"/>
+            </a>
+            <nav>
+                <label for="menu">Seleccione el proceso que desea realizar:</label>
+                <select id="menu" onchange="window.location.href=this.value;">
+                    <option value="#" selected disabled>-- Seleccione una opción --</option>
+                    <option value="../index.html">Home</option>
+                    <option value="./TemaInteresCompuesto.html">Interés Compuesto</option>
+                    <option value="./TemaCambioTasa.html">Cambio de tasas</option>
+                    <option value="./TemaEquivalencia.html">Equivalencia de tasas</option>
+                    <option value="./TemaEcuacionValor.html">Ecuación de valor</option>
+                    <option value="./TemaAnualidadVencida.html">Anualidad vencida</option>
+                    <option value="./TemaAnualidadAnticipada.html">Anualidad anticipada</option>
+                    <option value="./TemaAnualidadDiferida.html">Anualidad diferida</option>
+                    <option value="./TemaAnualidadPerpetua.html">Anualidad perpetua</option>
+                    <option value="./TemaAmortizacion.html">Amortización</option>
+                    <option value="./TemaCapitalizacion.html">Capitalización</option>
+                </select>
+            </nav>
         </header>
         <main>
             <h1>Bienvenido al sistema bancario UD</h1>
