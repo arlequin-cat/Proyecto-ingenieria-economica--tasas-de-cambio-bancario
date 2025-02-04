@@ -1,16 +1,20 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8"/>
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sistema Bancario UDistrital</title>
     <link rel="stylesheet" href="./Styles/styles.css">
     <link rel="icon" href="./Assets/Icon.ico">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet" />
+
 </head>
+
 <body>
     <header>
         <a href="./index.html">
-            <img src="./Assets/Logo.png" alt="Logo del Sistema Bancario UDistrital" title="HOME"/>
+            <img src="./Assets/Logo.png" alt="Logo del Sistema Bancario UDistrital" title="HOME" />
         </a>
         <nav>
             <label for="menu">Seleccione el proceso que desea realizar:</label>
@@ -32,51 +36,96 @@
     </header>
 
     <main>
-        <section>
+        <section class="animated-section">
             <h1>Bienvenido al Sistema Bancario UD</h1>
             <h2>Para acceder a una función, seleccione una opción del menú</h2>
+            <img src="./Assets/imgBanco.png" alt="Logo del Sistema Bancario UDistrital" title="HOME" />
         </section>
 
         <section class="datos">
             <h3>Manual de Usuario</h3>
             <p>
-                Cuando acceda a las diferentes secciones del banco, encontrará una serie de datos solicitados. Diligéncielos únicamente con números y use el punto (.) en caso de decimales.
+                Cuando acceda a las diferentes secciones del banco, encontrará una serie de datos solicitados.
+                Diligéncielos únicamente con números y use el punto (.) en caso de decimales.
             </p>
 
             <p>
-                En algunos casos, se le pedirá ingresar cuotas por año. Esto nos ayuda a determinar con qué interés se ejecutó la transacción.
+                En algunos casos, se le pedirá ingresar cuotas por año. Esto nos ayuda a determinar con qué interés se
+                ejecutó la transacción.
             </p>
 
             <p>
-                En la ecuación de valor, considere que el pago inicial hace referencia al acuerdo anterior y que el pago actual es el nuevo acuerdo. Además, las operaciones se calculan en meses para evitar decimales innecesarios.
+                En la ecuación de valor, considere que el pago inicial hace referencia al acuerdo anterior y que el pago
+                actual es el nuevo acuerdo. Además, las operaciones se calculan en meses para evitar decimales
+                innecesarios.
             </p>
 
             <p>
-                La amortización no requiere abono a capital a menos que así se especifique. Si se requiere, el sistema le pedirá el monto correspondiente.
+                La amortización no requiere abono a capital a menos que así se especifique. Si se requiere, el sistema
+                le pedirá el monto correspondiente.
             </p>
+            <img src="./Assets/imgManual.png" alt="Logo del Sistema Bancario UDistrital" title="HOME" />
 
-            <a class="link" href="https://misterprops.github.io/Banca-UD/" target="_blank">
-                Link a la página Banca-UD
-            </a>
         </section>
 
         <section class="advertencia">
-            <p><strong>ADVERTENCIA</strong></p>
             <p>
-                Estimado usuario, la Banca-UD puede presentar errores de cómputo debido a la precisión de las operaciones matemáticas que maneja.
+                <i class="fas fa-exclamation-triangle"></i>
+                <strong>ADVERTENCIA</strong>
+                <i class="fas fa-exclamation-triangle"></i>
+            </p>
+            <p>
+                Estimado usuario, la Banca-UD puede presentar errores de cómputo debido a la precisión de las
+                operaciones matemáticas que maneja.
                 <br>En algunos casos, como la amortización, el saldo final puede aparecer como -0.00.
                 <br>Sin embargo, no debe alarmarse: los cálculos son correctos con una precisión de hasta 6 decimales.
             </p>
         </section>
+
+        <div class="container">
+            <!-- Tarjeta 1 -->
+            <div class="card">
+                <img src="./Assets/ingJavier.jpg" alt="Javier Santiago Ramirez Marin" class="card-image">
+                <div class="card-text">
+                    <h3>Javier Santiago Ramirez Marin</h3>
+                    <p>Codigo: 20242678010</p>
+                </div>
+            </div>
+        
+            <!-- Tarjeta 2 -->
+            <div class="card">
+                <img src="./Assets/ingAlex.png" alt="Michael Alexander Arcos Murcia" class="card-image">
+                <div class="card-text">
+                    <h3>Michael Alexander Arcos Murcia</h3>
+                    <p>Codigo: 20242678046</p>
+                </div>
+            </div>
+        
+            <!-- Tarjeta 3 -->
+            <div class="card">
+                <img src="./Assets/ingSebastian.jpg" alt="Sebastian Cardenas Paladines" class="card-image">
+                <div class="card-text">
+                    <h3>Sebastian Cardenas Paladines</h3>
+                    <p>Codigo: 20242678025</p>
+                </div>
+            </div>
+        </div>
     </main>
 
     <footer>
-        <h3>Desarrollado por:</h3>
-        <ul>
-            <li>Andrés Rodríguez - 20232678012</li>
-            <li>Leonardo Jejen - 20232678008</li>
-            <li>Alejandro Suarez - 20232678004</li>
-        </ul>
+        <div style="float: left; text-align: left;">
+            <p>Desarrollado por:</p>
+            <p>Estudiantes de Ingeniería en Telemática</p>
+            <p>Grupo 301 de Ingeniería Económica</p>
+        </div>
+        <div style="float: right; text-align: right;">
+            <p style="float: none; text-align: left;">Docente:</p>
+            <p>EDWING OSWALDO BERDUGO ROMERO.</p>
+        </div>
+
+        <div style="clear: both;"></div>
     </footer>
+
 </body>
+
 </html>

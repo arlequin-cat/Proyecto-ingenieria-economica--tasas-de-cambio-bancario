@@ -1,202 +1,216 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8"/>
-        <link rel="stylesheet" href="../Styles/styles.css">
-        <title>Banca UD</title>
-        <link rel="icon" href="../Assets/Icon.ico">
-    </head>
-    <body>
-        <header>
-            <a href="../index.html">
-                <img src="../Assets/Logo.png" alt="Logo del Sistema Bancario UDistrital" title="HOME"/>
-            </a>
-            <nav>
-                <label for="menu">Seleccione el proceso que desea realizar:</label>
-                <select id="menu" onchange="window.location.href=this.value;">
-                    <option value="#" selected disabled>-- Seleccione una opción --</option>
-                    <option value="../index.html">Home</option>
-                    <option value="./TemaInteresCompuesto.html">Interés Compuesto</option>
-                    <option value="./TemaCambioTasa.html">Cambio de tasas</option>
-                    <option value="./TemaTasaAnticipada.html">Tasa anticipada</option>
-                    <option value="./TemaEcuacionValor.html">Ecuación de valor</option>
-                    <option value="./TemaAnualidadVencida.html">Anualidad vencida</option>
-                    <option value="./TemaAnualidadAnticipada.html">Anualidad anticipada</option>
-                    <option value="./TemaAnualidadDiferida.html">Anualidad diferida</option>
-                    <option value="./TemaAnualidadPerpetua.html">Anualidad perpetua</option>
-                    <option value="./TemaAmortizacion.html">Amortización</option>
-                    <option value="./TemaCapitalizacion.html">Capitalización</option>
-                </select>
-            </nav>
-        </header>
-        <main>
-            <h1>Bienvenido al sistema bancario UD</h1>
-            <h2>Este es la equivalencia de tasa</h2>
-            <div class="datos">
-                <label for="C1" id="L1"></label>
-                <input type="number" id="C1"/>
-                <select id="clase">
-                    <option value="1">%</option>
-                    <option value="2">No %</option>
-                </select>
-                <select id="tasa">
-                    <option value="">Seleccionar</option>
-                    <option value="efectivo">Efectivo</option>
-                    <option value="efectivo">Periodo</option>
-                    <option value="nominal">Vencido</option>
-                    <option value="nominal">Contable</option>
-                    <option value="nominal">Nominal</option>
-                </select>
-                <select id="periodo">
-                    <option value="">Seleccionar</option>
-                    <option value="1">Mensual</option>
-                    <option value="2">Bimestral</option>
-                    <option value="3">Trimestral</option>
-                    <option value="4">Cuatrimestral</option>
-                    <option value="6">Semestral</option>
-                    <option value="12">Anual</option>
-                </select>
-            </div>
-            <h1>A -></h1>
-            <div class="datos">
-                <select id="a_clase">
-                    <option value="1">%</option>
-                    <option value="2">No %</option>
-                </select>
-                <select id="a_periodo">
-                    <option value="">Seleccionar</option>
-                    <option value="1">Mensual</option>
-                    <option value="2">Bimestral</option>
-                    <option value="3">Trimestral</option>
-                    <option value="4">Cuatrimestral</option>
-                    <option value="6">Semestral</option>
-                    <option value="12">Anual</option>
-                </select>
-                <label id="selector"></label>
-            </div>
-            <button id="solucionar" class="btn">Solucionar</button>
-            <label id="resultado" class="res"></label>
-        </main>
-        <footer>
-            <h3>Desarrollado por:</h3>
-            <h4>Andres Rodriguez - 20232678012</h4>
-            <h4>Leonardo Jejen - 20232678008</h4>
-            <h4>Alejandro Suarez - 20232678004</h4>
-        </footer>
-    </body>
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="../Styles/styles.css">
+    <title>Banca UD</title>
+    <link rel="icon" href="../Assets/Icon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+
+<body>
+    <header>
+        <a href="../index.html">
+            <img src="../Assets/Logo.png" alt="Logo del Sistema Bancario UDistrital" title="HOME" />
+        </a>
+        <nav>
+            <label for="menu">Seleccione el proceso que desea realizar:</label>
+            <select id="menu" onchange="window.location.href=this.value;">
+                <option value="#" selected disabled>-- Seleccione una opción --</option>
+                <option value="./TemaInteresCompuesto.html">Interés Compuesto</option>
+                <option value="./TemaCambioTasa.html">Cambio de tasas</option>
+                <option value="./TemaTasaAnticipada.html">Tasa anticipada</option>
+                <option value="./TemaEcuacionValor.html">Ecuación de valor</option>
+                <option value="./TemaAnualidadVencida.html">Anualidad vencida</option>
+                <option value="./TemaAnualidadAnticipada.html">Anualidad anticipada</option>
+                <option value="./TemaAnualidadDiferida.html">Anualidad diferida</option>
+                <option value="./TemaAnualidadPerpetua.html">Anualidad perpetua</option>
+                <option value="./TemaAmortizacion.html">Amortización</option>
+                <option value="./TemaCapitalizacion.html">Capitalización</option>
+            </select>
+            <button class="Home-button" onclick="window.location.href='../index.html';">
+                <i class="fas fa-home"></i> HOME
+            </button>
+        </nav>
+    </header>
+    <main>
+        <h1>Bienvenido al sistema bancario UD</h1>
+        <h2>Este es la equivalencia de tasa</h2>
+        <div class="datos">
+            <label for="C1" id="L1"></label>
+            <input type="number" id="C1" />
+            <select id="clase">
+                <option value="1">%</option>
+                <option value="2">No %</option>
+            </select>
+            <select id="tasa">
+                <option value="">Seleccionar</option>
+                <option value="efectivo">Efectivo</option>
+                <option value="efectivo">Periodo</option>
+                <option value="nominal">Vencido</option>
+                <option value="nominal">Contable</option>
+                <option value="nominal">Nominal</option>
+            </select>
+            <select id="periodo">
+                <option value="">Seleccionar</option>
+                <option value="1">Mensual</option>
+                <option value="2">Bimestral</option>
+                <option value="3">Trimestral</option>
+                <option value="4">Cuatrimestral</option>
+                <option value="6">Semestral</option>
+                <option value="12">Anual</option>
+            </select>
+        </div>
+        <h1>A -></h1>
+        <div class="datos">
+            <select id="a_clase">
+                <option value="1">%</option>
+                <option value="2">No %</option>
+            </select>
+            <select id="a_periodo">
+                <option value="">Seleccionar</option>
+                <option value="1">Mensual</option>
+                <option value="2">Bimestral</option>
+                <option value="3">Trimestral</option>
+                <option value="4">Cuatrimestral</option>
+                <option value="6">Semestral</option>
+                <option value="12">Anual</option>
+            </select>
+            <label id="selector"></label>
+        </div>
+        <button id="solucionar" class="btn">Solucionar</button>
+        <label id="resultado" class="res"></label>
+    </main>
+    <footer>
+        <div style="float: left; text-align: left;">
+            <p>Desarrollado por:</p>
+            <p>Estudiantes de Ingeniería en Telemática</p>
+            <p>Grupo 301 de Ingeniería Económica</p>
+        </div>
+        <div style="float: right; text-align: right;">
+            <p style="float: none; text-align: left;">Docente:</p>
+            <p>EDWING OSWALDO BERDUGO ROMERO.</p>
+        </div>
+
+        <div style="clear: both;"></div>
+    </footer>
+</body>
+
 </html>
 <script type="text/javascript">
     let solucionar = document.getElementById("solucionar");
     let selector = document.getElementById("selector");
     let tasa = document.getElementById("tasa");
-    tasa.addEventListener("change", ()=>{
-        if(tasa.value == "efectivo"){
+    tasa.addEventListener("change", () => {
+        if (tasa.value == "efectivo") {
             selector.innerHTML = "Periodo, Efectivo";
-        }else if(tasa.value == "nominal"){
+        } else if (tasa.value == "nominal") {
             selector.innerHTML = "Vencido, Contable, Nominal";
-        }else{
+        } else {
             selector.innerHTML = "";
         }
     });
-    
-    solucionar.addEventListener("click" , ()=>{
-        if(validar()){
-            if(parseInt(document.getElementById("C1").value) >= 0){
+
+    solucionar.addEventListener("click", () => {
+        if (validar()) {
+            if (parseInt(document.getElementById("C1").value) >= 0) {
                 let campo = parseFloat(document.getElementById("C1").value);
                 let clase = document.getElementById("clase").value;
                 let a_clase = document.getElementById("a_clase").value;
                 let periodo = document.getElementById("periodo").value;
                 let a_periodo = document.getElementById("a_periodo").value;
 
-                if(clase == 1){
-                    campo = campo/100;
+                if (clase == 1) {
+                    campo = campo / 100;
                 }
-                if(tasa.value == "nominal"){
-                    campo = campo / parseInt(12/periodo);
+                if (tasa.value == "nominal") {
+                    campo = campo / parseInt(12 / periodo);
                     //(1+i)^n = (1+i)^m
-                    campo = (Math.pow(1+campo,parseInt(12/periodo)/parseInt(12/a_periodo)))-1;
-                    campo = campo * parseInt(12/a_periodo);
-                }else if(tasa.value == "efectivo"){
-                    campo = (Math.pow(1+campo,parseInt(12/periodo)/parseInt(12/a_periodo)))-1;
+                    campo = (Math.pow(1 + campo, parseInt(12 / periodo) / parseInt(12 / a_periodo))) - 1;
+                    campo = campo * parseInt(12 / a_periodo);
+                } else if (tasa.value == "efectivo") {
+                    campo = (Math.pow(1 + campo, parseInt(12 / periodo) / parseInt(12 / a_periodo))) - 1;
                 }
-                if(a_clase == 1){
-                    campo = campo*100;
+                if (a_clase == 1) {
+                    campo = campo * 100;
                 }
                 document.getElementById("resultado").innerHTML = campo.toFixed(6) + " " + name();
-            }else{
+            } else {
                 alert("El campo debe ser mayor a 0");
             }
-        }else{
+        } else {
             alert("Ingrese todos los datos");
         }
-        
+
     });
-    function validar(){
-        if(document.getElementById("tasa").style.display != "none" && document.getElementById("tasa").value==""){
+    function validar() {
+        if (document.getElementById("tasa").style.display != "none" && document.getElementById("tasa").value == "") {
             return false
         }
-        if(document.getElementById("periodo").style.display != "none" && document.getElementById("periodo").value==""){
+        if (document.getElementById("periodo").style.display != "none" && document.getElementById("periodo").value == "") {
             return false
         }
-        if(document.getElementById("C1").style.display != "none" && document.getElementById("C1").value==""){
+        if (document.getElementById("C1").style.display != "none" && document.getElementById("C1").value == "") {
             return false
         }
-        if(document.getElementById("a_periodo").style.display != "none" && document.getElementById("a_periodo").value==""){
+        if (document.getElementById("a_periodo").style.display != "none" && document.getElementById("a_periodo").value == "") {
             return false
         }
         return true
     }
-    function name (){
+    function name() {
         let name = "";
 
-        if(parseInt(document.getElementById("a_clase").value) == 1){
+        if (parseInt(document.getElementById("a_clase").value) == 1) {
             name += "% ";
         }
-        switch(parseInt(document.getElementById("tasa").selectedIndex)){
-            case 1:{
+        switch (parseInt(document.getElementById("tasa").selectedIndex)) {
+            case 1: {
                 name += "E";
                 break;
             }
-            case 2:{
+            case 2: {
                 name += "P";
                 break;
             }
-            case 3:{
+            case 3: {
                 name += "V";
                 break;
             }
-            case 4:{
+            case 4: {
                 name += "C";
                 break;
             }
-            case 5:{
+            case 5: {
                 name += "N";
                 break;
             }
         }
-        
-        switch(parseInt(document.getElementById("a_periodo").selectedIndex)){
-            case 1:{
+
+        switch (parseInt(document.getElementById("a_periodo").selectedIndex)) {
+            case 1: {
                 name += "M";
                 break;
             }
-            case 2:{
+            case 2: {
                 name += "B";
                 break;
             }
-            case 3:{
+            case 3: {
                 name += "T";
                 break;
             }
-            case 4:{
+            case 4: {
                 name += "C";
                 break;
             }
-            case 5:{
+            case 5: {
                 name += "S";
                 break;
             }
-            case 6:{
+            case 6: {
                 name += "A";
                 break;
             }
