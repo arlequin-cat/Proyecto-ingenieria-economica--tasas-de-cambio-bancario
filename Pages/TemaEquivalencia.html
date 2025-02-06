@@ -38,31 +38,38 @@
     <main>
         <h1>Bienvenido al sistema bancario UD</h1>
         <h2>Este es la equivalencia de tasa</h2>
-        <div class="datos">
-            <label for="C1" id="L1"></label>
-            <input type="number" id="C1" />
-            <select id="clase">
-                <option value="1">%</option>
-                <option value="2">No %</option>
-            </select>
-            <select id="tasa">
-                <option value="">Seleccionar</option>
-                <option value="efectivo">Efectivo</option>
-                <option value="efectivo">Periodo</option>
-                <option value="nominal">Vencido</option>
-                <option value="nominal">Contable</option>
-                <option value="nominal">Nominal</option>
-            </select>
-            <select id="periodo">
-                <option value="">Seleccionar</option>
-                <option value="1">Mensual</option>
-                <option value="2">Bimestral</option>
-                <option value="3">Trimestral</option>
-                <option value="4">Cuatrimestral</option>
-                <option value="6">Semestral</option>
-                <option value="12">Anual</option>
-            </select>
+        <div class="datos-container">
+            <label for="C1" id="L1" class="label">Ingrese el valor:</label>
+            <input type="number" id="C1" class="input-field" placeholder="Ej. 1000" />
+        
+            <div class="select-group">
+                <select id="clase" class="select-box">
+                    <option value="1">%</option>
+                    <option value="2">No %</option>
+                </select>
+        
+                <select id="tasa" class="select-box">
+                    <option value="">Seleccionar</option>
+                    <option value="efectivo">Efectivo</option>
+                    <option value="efectivo">Periodo</option>
+                    <option value="nominal">Vencido</option>
+                    <option value="nominal">Contable</option>
+                    <option value="nominal">Nominal</option>
+                </select>
+        
+                <select id="periodo" class="select-box">
+                    <option value="">Seleccionar</option>
+                    <option value="1">Mensual</option>
+                    <option value="2">Bimestral</option>
+                    <option value="3">Trimestral</option>
+                    <option value="4">Cuatrimestral</option>
+                    <option value="6">Semestral</option>
+                    <option value="12">Anual</option>
+                </select>
+            </div>
         </div>
+        
+        
         <h1>A -></h1>
         <div class="datos">
             <select id="a_clase">
