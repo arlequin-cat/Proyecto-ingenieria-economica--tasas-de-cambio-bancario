@@ -36,9 +36,8 @@
         </nav>
     </header>
     <main>
-        <h1>Bienvenido al sistema bancario UD</h1>
-        <h2>Este es el cambio de tasa</h2>
         <div class="datos">
+            <h1>Bienvenido al sistema bancario UD</h1>
             <label for="C1" id="L1"></label>
             <input type="number" id="C1" />
             <select id="clase">
@@ -68,8 +67,9 @@
                 <option value="12">Anual</option>
             </select>
         </div>
-        <h1>A -></h1>
+        
         <div class="datos">
+            <h2>Este es el cambio de tasa</h2>
             <select id="a_clase">
                 <option value="1">%</option>
                 <option value="2">No %</option>
@@ -97,8 +97,12 @@
                 <option value="12">Anual</option>
             </select>
         </div>
-        <button id="solucionar" class="btn">Solucionar</button>
-        <label id="resultado" class="res"></label>
+        <div class="datos">
+            <button id="solucionar" class="btn">Solucionar</button>
+        </div>
+        <div class="datos">
+            <label id="resultado" class="res"></label>
+        </div>
     </main>
     <footer>
         <div style="float: left; text-align: left;">
