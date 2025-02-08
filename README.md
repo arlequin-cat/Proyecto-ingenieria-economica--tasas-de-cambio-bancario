@@ -6,7 +6,7 @@ Este proyecto, parte del curso final de Ingeniería Económica, explora el anál
 ## Realizado por:
 - **Alexander Arcos Murcia**
 - **Javier Santiago Ramirez Marin**
-- **Sebastian Cardenas Torres**
+- **Sebastian Cardenas Paladines**
 
 ## Objetivos
 - Analizar diversas tasas de cambio utilizadas en operaciones bancarias.
